@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Sistema Gestione Scolastica</title>
+
+
+	<link rel="stylesheet" th:href="@{/css/stile.css}">
+	<link rel="stylesheet" th:href="@{/css/mediaqueries.css}">
+
+
+
+</head>
+
+
+
+
+
+<div class="header">
+	<ul>
+		<li>
+			<form th:action="@{/logout}" method="post" >
+				<button type="submit" class="logout">Logout</button>
+			</form>
+
+		</li>
+	</ul>
+
+	<div class="scritta-sistema">
+
+		<h2 class="sistema-gestione-scolastica-index">
+
+			Sistema Gestione Scolastica
+
+		</h2>
+
+	</div>
+
+</div>
+
+
+<body>
+
+<!-- Particelle -->
+
+<canvas id="canvas"></canvas>
+
+<!--  -->
+
+<div class="ball">
+
+	<h1><p><i class="i-studente">
+
+		Studenti
+
+	</i></p></h1>
+
+	<a th:href="@{/lista}">
+		<img class="studente-uni" th:src="@{/immagini/studente-foto.png}">
+	</a>
+</div>
+
+
+<div class="ball-insegnanti">
+
+	<h1><p><i class="i-insegnanti">
+
+		Insegnanti
+
+	</i></p></h1>
+
+	<a th:href="@{/insegnanti}">
+		<img class="professore" th:src="@{/immagini/insegnante-foto.png}">
+	</a>
+</div>
+
+
+<!---
+
+<div class="ball-materie">
+
+	<h1><p><i>
+
+		Materie
+
+	</i></p></h1>
+
+	<a th:href="@{/materie}">
+		<img class="materie" th:src="@{/immagini/school.png}">
+	</a>
+</div>
+
+--->
+
+
+<footer class="footer">
+	<p class="testo_footer">Creato da <i>Marco Velluso</i></p>
+</footer>
+
+
+<script th:src="@{/javascript/particelle.js}"></script>
+</body>
+
+
+
+</html>

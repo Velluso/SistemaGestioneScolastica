@@ -1,0 +1,137 @@
+body {
+
+    background-color: #060c21;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -220px;
+
+}
+
+h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00e0f7;
+}
+
+a:hover {
+
+    color: #089d9d;
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+
+    padding: 0.875rem 0.75rem;
+}
+
+
+/*  LISTA INSEGNANTI CRUD */
+
+.lista-studenti {
+
+
+    font-family: "JetBrains Mono ExtraBold";
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+
+}
+
+.salva-studente-scritta {
+
+    font-family: "JetBrains Mono ExtraBold";
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-bottom: 25px;
+
+}
+
+.scritta-aggiorna-studente {
+
+    font-family: "JetBrains Mono ExtraBold";
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-bottom: 25px;
+
+}
+
+/*    FINE SCRITTE STUDENTI   */
+
+
+
+/* SCRITTE LISTA INSEGNANTI */
+
+
+.sistema-gestione-scolastica-2 {
+
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-top: 15px;
+}
+
+.sistema-gestione-scolastica-aggiorna {
+
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-top: 78px;
+}
+
+.lista-insegnanti {
+
+    font-family: "JetBrains Mono ExtraBold";
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+
+}
+
+.scritta-salva-insegnanti {
+
+    font-family: "JetBrains Mono ExtraBold";
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-bottom: 25px;
+
+}
+
+
+.scritta-aggiorna-insegnanti {
+
+    font-family: "JetBrains Mono ExtraBold";
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* FINE SCRITTE INSEGNANTI */
+
+
+
+
+/* TABELLA INSEGNANTI */
+
+.table td, .table th {
+    padding: 0.55rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+

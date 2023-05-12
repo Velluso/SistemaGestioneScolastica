@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sistema Gestione Scolastica</title>
+
+<link rel="stylesheet"
+	th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css}"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+	<link rel="stylesheet" th:href="@{/css/lista.css}">
+	<link rel="stylesheet" th:href="@{/css/stile.css}">
+	<link rel="stylesheet" th:href="@{/css/mediaqueries.css}">
+	
+</head>
+<body>
+
+
+<div class="header">
+<ul>
+	<li>
+		<form th:action="@{/logout}" method="post" >
+			<button type="submit" class="logout">Logout</button>
+		</form>
+
+	</li>
+	<li>
+		<form>
+			<a th:href="@{/home}" class="torna-home">Torna alla Home</a>
+		</form>
+	</li>
+</ul>
+</div>
+
+<!-- INSERIRE QUI BARRA DI RICERCA STUDENTI -->
+
+
+	<div class="container my-2">
+	<h1 class="lista-studenti">Lista Studenti</h1>
+	
+	<a th:href = "@{/mostraNuovoFormStudente}" class="btn btn-primary btn-sm mb-3"> Aggiungi Studente </a>
+	
+		<table border="1" class = "table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>
+						<a th:href="@{'/page/' + ${currentPage} + '?sortField=nome&sortDir=' + ${reverseSortDir}}" >
+							Nome Studente</a>
+					</th>
+					<th>
+					<a th:href="@{'/page/' + ${currentPage} + '?sortField=cognome&sortDir=' + ${reverseSortDir}}">
+							Cognome Studente</a>
+					</th>
+					<th>
+					<a th:href="@{'/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">
+							Email Studente</a>
+					</th>
+
+					<th>
+						<a th:href="@{'/page/' + ${currentPage} + '?sortField=corso&sortDir=' + ${reverseSortDir}}">
+							Indirizzo Studi</a>
+					</th>
+					<th> Azioni </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="studente : ${studenti}">
+
+					<td th:text="${studente.nome}"></td>
+					<td th:text="${studente.cognome}"></td>
+					<td th:text="${studente.email}"></td>
+					<td th:text="${studente.corso}"></td>
+
+
+					<td> <a th:href="@{/mostraFormUpdate/{id}(id=${studente.id})}" class="btn btn-primary">Modifica</a>
+					    <a th:href="@{/cancellaStudenti/{id}(id=${studente.id})}" class="btn btn-danger">Cancella</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div th:if = "${totalPages > 1}">
+			<div class="row">
+				<div class="col-sm-2">
+					Righe Totali: [[${totalItems}]]
+				</div>
+				<div class="col-sm-10">
+					<div class="row justify-content-end">
+						<div class = "col-sm-1">
+							<a th:if="${currentPage > 1}" th:href="@{'/page/' + ${currentPage - 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Precedente</a>
+							<span th:unless="${currentPage > 0}">Precedente</span>
+						</div>
+						<div class="col-sm-1">
+							<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Prossima</a>
+							<span th:unless="${currentPage <= totalPages}">Prossima</span>
+						</div>
+						<div class="col-sm-1">
+							<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Ultima</a>
+							<span th:unless="${currentPage <= totalPages}">Ultima</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<footer class="footer">
+	<p class="testo_footer">Creato da <i>Marco Velluso</i></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,657 @@
+* {
+    font-family: "JetBrains Mono ExtraBold";
+
+}
+
+/* PARTICELLE */
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    opacity: 20%;
+}
+
+
+/* */
+
+
+i {
+    color: #e8e8e8;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+/* SCRITTE DENTRO BOLLE */
+
+.i-studente {
+
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+
+}
+
+
+.i-insegnanti {
+
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060c21;
+    font-family:'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+
+
+/* SCRITTA SISTEMA GESTIONE SCOLASTICA */
+/* DA FIX PER DIMENSIONI RESPONSIVE, VALUTARE SE METTERE MEDIA QUERY */
+
+
+.scritta-sistema {
+
+   /*
+   position: absolute;
+    margin-top: 235px;
+    colore: white;
+    margin-left: -990px;
+    font-style: italic;
+
+    */
+
+    color: white;
+    font-style: italic;
+    text-align: center; /* centra orizzontalmente */
+    position: fixed; /* centra verticalmente */
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* sposta la scritta di metà delle sue dimensioni */
+    font-family: "JetBrains Mono ExtraBold";
+    font-size: xx-large;
+
+
+
+}
+
+/* SCRITTA SISTEMA GESTIONE SCOLASTICA NELLA PAGINA INDEX */
+
+.sistema-gestione-scolastica-index {
+
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+    margin-top: -23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAVBAR */
+
+.header {
+    display: flex;
+    align-items: center;
+   /* justify-content: center; */
+    background-color: #060C1A;
+    color: white;
+    height: 10%;
+    width: 100%;
+    padding: 0 20px;
+    position: fixed;
+    top: 0px;
+   /* left: 85%; */
+    border-radius: 15px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    margin-right: 20px;
+}
+
+.header a {
+    color: #f1ebeb;
+    text-decoration: overline;
+    transform: scale3d(1.5, 1.5, 1.5);
+    border-bottom: 1px solid #f1ebeb;
+    border-radius: 8px;
+}
+
+.header a:hover {
+
+    color: #089d9d;
+    border-bottom: 2px solid #089d9d;
+
+}
+
+
+
+/* BOLLE DI STUDENTI E PROF */
+
+
+.contenitore {
+
+    position: relative;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background: #0f1c49;
+    letter-spacing: 3px;
+    border-radius: 160px;
+    margin-top: 487px;
+
+}
+
+.contenitore::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+
+}
+
+.contenitore::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    /* filter: drop-shadow(2px 4px 6px black); */
+     filter: blur(40px);
+    border-radius: 122px;
+    border-style: solid;
+}
+
+.contenitore::before, .contenitore::after {
+    background: linear-gradient(251deg, rgb(95, 12, 179), #060c21, #c9b504);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* INSEGNANTI */
+
+.contenitore-insegnanti {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background: #0f1c49;
+    letter-spacing: 3px;
+    border-radius: 160px;
+
+}
+
+.contenitore-insegnanti::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #ffffff;
+    z-index: -1;
+    animation: rotate_border 6s linear infinite;
+
+}
+
+.contenitore-insegnanti::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #53049b;
+    z-index: -2;
+    animation: rotate_border 6s linear infinite;
+    filter: blur(40px);
+    /* filter: drop-shadow(2px 4px 6px black); */
+    border-radius: 122px;
+    border-style: solid;
+}
+
+.contenitore-insegnanti::before, .contenitore-insegnanti::after {
+    background: linear-gradient(251deg, rgb(95, 12, 179), #060c21, #c9b504);
+
+
+}
+
+
+
+/* MATERIE */
+
+
+/* .contenitore-materie {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background: #0f1c49;
+    letter-spacing: 3px;
+    border-radius: 160px;
+
+}
+
+ */
+
+.materie {
+
+    max-height: 150px;
+    max-width: 120px;
+    margin-left: 39px;
+    margin-top: -34px;
+}
+
+
+
+.contenitore-materie::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+
+}
+
+.contenitore-materie::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #111111;
+    z-index: -2;
+    filter: blur(40px);
+
+}
+
+.contenitore-materie::before, .contenitore::after {
+
+    background: linear-gradient(251deg, rgb(12, 179, 65), #060c21, #05c9b9);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+
+
+
+
+.contenuto {
+
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+
+}
+
+.studente-uni {
+    max-width: 180px;
+    max-height: 112px;
+    /* left: 30px; */
+    margin-left: 45px;
+    margin-top: -31px;
+    filter: invert(1);
+
+}
+
+
+
+.studente-uni:hover {
+
+    max-width: 185px;
+    max-height: 114px;
+  /*  margin-left: 55px; */
+    transition: 0.2s ease-out;
+
+
+}
+
+
+
+.professore {
+    max-width: 180px;
+    max-height: 150px;
+    margin-left: 22px;
+    margin-top: -33px;
+    filter: invert(1);
+}
+
+.professore:hover {
+
+    max-width: 185px;
+    max-height: 152px;
+    transition: 0.2s ease-out;
+}
+
+
+
+
+/* BOTTONE LOGOUT */
+
+.logout {
+
+    border-radius: 40px;
+    width: 90px;
+    height: 45px;
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.logout:hover {
+
+    font-size: 18px;
+    width: 93px;
+    height: 47px;
+    background-color: #182f79;
+    color: white;
+    transition: 0.5s ease-out;
+}
+
+
+/* PALLA STUDENTI */
+
+.ball{
+    animation: float 3.5s ease-in-out infinite;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    padding: 5px;
+    margin: 15px;
+
+    background: radial-Gradient( circle at 75% 30%, white 5px, #f5f1f1 8%, #e9e4ea 60%, #efe9ef 100%);
+
+/*
+
+ background: radial-Gradient( circle at 75% 30%, white 5px,#df00ff 8%,#db9edf 60%, #df00ff 100%);
+
+ box-shadow: inset 0 0 20px #c1aac6, inset 10px 0 46px
+    #df00ff, inset 88px 0px 60px #db9edf, inset  -20px -60px 100px #fde9ea, inset 0
+    50px 140px #fde9ea, 0 0 90px #fff;
+
+ */
+}
+
+.ball::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #ffffff;
+    z-index: -1;
+    animation: rotate_border 6s linear infinite;
+
+}
+
+.ball::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #53049b;
+    z-index: -2;
+    animation: rotate_border 6s linear infinite;
+    filter: blur(40px);
+    /* filter: drop-shadow(2px 4px 6px black); */
+    border-radius: 122px;
+    border-style: solid;
+}
+
+
+.ball::before, .ball::after {
+
+  /*  background: linear-gradient(251deg, rgb(112, 1, 229), #060c21, #05c9b9); */
+    background: linear-gradient(251deg, rgb(0 0 0), #060c21, #ff0202);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+
+
+/* PALLA INSEGNANTI */
+
+
+.ball-insegnanti{
+    animation: float 3.5s ease-in-out infinite;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    padding: 5px;
+    margin: 15px;
+
+    background: radial-Gradient( circle at 75% 30%, white 5px, #f5f1f1 8%, #e9e4ea 60%, #efe9ef 100%);
+
+    /*
+
+     background: radial-Gradient( circle at 75% 30%, white 5px,#df00ff 8%,#db9edf 60%, #df00ff 100%);
+
+     box-shadow: inset 0 0 20px #c1aac6, inset 10px 0 46px
+        #df00ff, inset 88px 0px 60px #db9edf, inset  -20px -60px 100px #fde9ea, inset 0
+        50px 140px #fde9ea, 0 0 90px #fff;
+
+     */
+}
+
+.ball-insegnanti::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #ffffff;
+    z-index: -1;
+    animation: rotate_border 6s linear infinite;
+
+}
+
+.ball-insegnanti::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #53049b;
+    z-index: -2;
+    animation: rotate_border 6s linear infinite;
+    filter: blur(40px);
+    /* filter: drop-shadow(2px 4px 6px black); */
+    border-radius: 122px;
+    border-style: solid;
+}
+
+
+.ball-insegnanti::before, .ball-insegnanti::after {
+
+    /* background: linear-gradient(251deg, rgb(250, 115, 5), #060c21, #0021ff); */
+    background: linear-gradient(251deg, rgb(0 0 0), #060c21, #6200ff);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+
+
+
+/* PALLA MATERIE */
+
+
+.ball-materie{
+    animation: float 3.5s ease-in-out infinite;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    padding: 5px;
+    margin: 15px;
+
+    background: radial-Gradient( circle at 75% 30%, white 5px, #f5f1f1 8%, #e9e4ea 60%, #efe9ef 100%);
+
+    /*
+
+     background: radial-Gradient( circle at 75% 30%, white 5px,#df00ff 8%,#db9edf 60%, #df00ff 100%);
+
+     box-shadow: inset 0 0 20px #c1aac6, inset 10px 0 46px
+        #df00ff, inset 88px 0px 60px #db9edf, inset  -20px -60px 100px #fde9ea, inset 0
+        50px 140px #fde9ea, 0 0 90px #fff;
+
+     */
+}
+
+.ball-materie::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #ffffff;
+    z-index: -1;
+    animation: rotate_border 6s linear infinite;
+
+}
+
+.ball-materie::after {
+
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #53049b;
+    z-index: -2;
+    animation: rotate_border 6s linear infinite;
+    filter: blur(40px);
+    /* filter: drop-shadow(2px 4px 6px black); */
+    border-radius: 122px;
+    border-style: solid;
+}
+
+
+.ball-materie::before, .ball-materie::after {
+
+    background: linear-gradient(251deg, rgb(255, 205, 0), #060c21, #38ff00);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(30px);
+    }
+    100%{
+        transform: translatey(0px)
+    }
+}
+
+
+
+
+.footer {
+    background-color: #060C1A;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.testo_footer {
+    margin: 0;
+    margin-top: -25px;
+    font-size: 20px;
+    filter: drop-shadow(2px 0px 25px);
+    text-shadow: -6px -2px 6px #000000;
+}
+
+
+
+
