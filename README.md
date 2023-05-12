@@ -2,7 +2,7 @@
 
 ```Applicazione Web presentata all'esame di maturità 2023```
 
-Questo progetto è un'applicazione Web Spring Boot CRUD che offre funzionalità di paginazione e ordinamento dei dati utilizzando Spring Boot, ThymeLeaf, Spring Data JPA, Hibernate e un database MySQL.
+Questo progetto è un'applicazione Web Spring Boot CRUD con autenticazione gestita da Spring Security che offre funzionalità di paginazione e ordinamento dei dati utilizzando Spring Boot, ThymeLeaf, Spring Data JPA, Hibernate e un database MySQL.
 Il lato frontend è stato realizzato con HTML, CSS E JavaScript.
 
 ## Prerequisiti
@@ -32,6 +32,7 @@ Il lato frontend è stato realizzato con HTML, CSS E JavaScript.
 
 ## Funzionalità
 
+- Autenticazione gestita da Spring Security
 - Visualizzazione della lista degli studenti ed insegnanti
 - Aggiunta di nuovi studenti/insegnanti
 - Modifica di studenti/insegnanti esistenti
@@ -41,7 +42,7 @@ Il lato frontend è stato realizzato con HTML, CSS E JavaScript.
 
 ## Tecnologie utilizzate
 
-L'applicazione è sviluppata in Java utilizzando il framework Spring Boot e il motore di template ThymeLeaf per la gestione del frontend. Il CSS comprende anche l'utilizzo di Bootstrap, mentre per la logica di persistenza dei dati è stato utilizzato Spring Data JPA con il supporto del framework Hibernate. Il database utilizzato è MySQL.
+L'applicazione è sviluppata in Java utilizzando il framework Spring Boot, Spring Security per l'autenticazione ed il motore di template ThymeLeaf per la gestione del frontend. Il CSS comprende anche l'utilizzo di Bootstrap; per la logica di persistenza dei dati è stato utilizzato Spring Data JPA con il supporto del framework Hibernate. Il database utilizzato è MySQL.
 
 ## Screenshots della Web App
 
