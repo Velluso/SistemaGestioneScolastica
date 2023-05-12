@@ -43,6 +43,24 @@ Il lato frontend è stato realizzato con HTML, CSS E JavaScript.
 
 L'applicazione è sviluppata in Java utilizzando il framework Spring Boot e il motore di template ThymeLeaf per la gestione del frontend. Il CSS comprende anche l'utilizzo di Bootstrap, mentre per la logica di persistenza dei dati è stato utilizzato Spring Data JPA con il supporto del framework Hibernate. Il database utilizzato è MySQL.
 
+## Screenshots della Web App
+
+``` Interfaccia Login ```
+![image](https://github.com/Velluso/SistemaGestioneScolastica/assets/102395206/9b55b4cc-70df-479b-a44a-105b469e4599)
+
+``` Home Page ```
+![image](https://github.com/Velluso/SistemaGestioneScolastica/assets/102395206/7295f674-5365-43f6-a888-4606ffa9acff)
+
+``` Lista Studenti ```
+
+![image](https://github.com/Velluso/SistemaGestioneScolastica/assets/102395206/816de143-4f37-4fda-aee0-6a62a0fd4da7)
+
+
+``` Lista Insegnanti ```
+
+![image](https://github.com/Velluso/SistemaGestioneScolastica/assets/102395206/d108f43c-71bf-447f-b93d-6f471851c095)
+
+
 
 ## Licenza
 Questo progetto è concesso in licenza ai sensi della Licenza MIT. Consulta il file LICENSE per ulteriori informazioni.
